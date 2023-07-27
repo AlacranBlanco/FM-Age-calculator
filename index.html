@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Age calculator app</title>
+    <script src="script.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              grayLight: "hsl(0,0%,94%,1)",
+              purple: "hsl(259, 100%, 65%)",
+              lightRed: "hsl(0, 100%, 67%)",
+            },
+            fontFamily: {
+              sans: ["Poppins", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="flex h-screen items-center justify-center bg-grayLight">
+    <!-- Hero Section  Web-->
+    <section id="hero">
+      <div class="bg-white max-w-lg p-5 rounded-br-[6rem] rounded-lg">
+        <form id="form" class="flex flex-col space-y-8">
+          <div class="flex space-x-4">
+            <div class="flex flex-col space-y-1">
+              <label
+                id="textDay"
+                class="font-semibold text-xs antialiased tracking-widest text-gray-500"
+                >DAY</label
+              >
+              <input
+                id="inputDay"
+                placeholder="24"
+                class="focus:border-purple caret-purple focus:outline-none p-2 border-2 rounded-md w-20 font-semibold antialiased"
+              />
+              <span
+                id="errorDay"
+                class="italic hidden text-[8px] sm:text-[9px] text-red-500"
+              ></span>
+            </div>
+            <div class="flex flex-col space-y-1">
+              <label
+                id="textMonth"
+                class="font-semibold text-xs antialiased tracking-widest text-gray-500"
+                >MONTH</label
+              >
+              <input
+                id="inputMonth"
+                placeholder="09"
+                class="focus:border-purple caret-purple focus:outline-none p-2 border-2 rounded-md w-20 font-semibold antialiased"
+              />
+              <span
+                id="errorMonth"
+                class="italic hidden text-[8px] sm:text-[9px] text-red-500"
+              ></span>
+            </div>
+            <div class="flex flex-col space-y-1">
+              <label
+                id="textYear"
+                class="font-semibold text-xs antialiased tracking-widest text-gray-500"
+                >YEAR</label
+              >
+              <input
+                id="inputYear"
+                placeholder="1984"
+                class="focus:border-purple caret-purple focus:outline-none p-2 border-2 rounded-md w-20 font-semibold antialiased"
+              />
+              <span
+                id="errorYear"
+                class="italic hidden text-[8px] sm:text-[9px] text-red-500"
+              ></span>
+            </div>
+          </div>
+          <div class="mt-5 relative">
+            <div
+              class="h-[0.09rem] sm:w-[24rem] w-full bg-gray-100 rounded-xs"
+            ></div>
+            <div class="absolute -top-5 right-[7rem] sm:right-0">
+              <button
+                type="submit"
+                class="focus:bg-purple hover:bg-purple duration-300 bg-black rounded-full"
+              >
+                <svg
+                  class="p-[11px]"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="46"
+                  height="44"
+                  viewBox="0 0 46 44"
+                >
+                  <g fill="none" stroke="#FFF" stroke-width="2">
+                    <path
+                      d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </form>
+        <div class="mt-5 flex flex-col space-y-1">
+          <div class="flex space-x-1 items-center">
+            <h3
+              id="aYears"
+              class="font-bold text-5xl sm:text-6xl italic text-purple"
+            >
+              - -
+            </h3>
+            <h3
+              class="font-bold text-5xl sm:text-6xl italic text-black tracking-tight"
+            >
+              years
+            </h3>
+          </div>
+          <div class="flex space-x-1 items-center">
+            <h3
+              id="aMonths"
+              class="font-bold text-5xl sm:text-6xl italic text-purple"
+            >
+              - -
+            </h3>
+            <h3
+              class="font-bold text-5xl sm:text-6xl italic text-black tracking-tight"
+            >
+              months
+            </h3>
+          </div>
+          <div class="flex space-x-1 items-center">
+            <h3
+              id="aDays"
+              class="font-bold text-5xl sm:text-6xl italic text-purple"
+            >
+              - -
+            </h3>
+            <h3
+              class="font-bold text-5xl sm:text-6xl italic text-black tracking-tight"
+            >
+              days
+            </h3>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
