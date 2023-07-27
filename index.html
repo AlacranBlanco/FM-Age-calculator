@@ -40,66 +40,68 @@
   <body class="flex h-screen items-center justify-center bg-grayLight">
     <!-- Hero Section  Web-->
     <section id="hero">
-      <div class="bg-white max-w-lg p-5 rounded-br-[6rem] rounded-lg">
+      <div
+        class="bg-white md:max-w-4xl max-w-md md:p-10 p-7 rounded-br-[6rem] rounded-lg"
+      >
         <form id="form" class="flex flex-col space-y-8">
-          <div class="flex space-x-4">
+          <div class="flex md:space-x-10 space-x-7">
             <div class="flex flex-col space-y-1">
               <label
                 id="textDay"
-                class="font-semibold text-xs antialiased tracking-widest text-gray-500"
+                class="font-semibold text-md antialiased tracking-widest text-gray-500"
                 >DAY</label
               >
               <input
                 id="inputDay"
                 placeholder="24"
-                class="focus:border-purple caret-purple focus:outline-none p-2 border-2 rounded-md w-20 font-semibold antialiased"
+                class="focus:border-purple caret-purple focus:outline-none p-2 border-2 rounded-md w-[5.3rem] md:w-[9rem] h-14 font-semibold antialiased text-xl md:text-2xl"
               />
               <span
                 id="errorDay"
-                class="italic hidden text-[8px] sm:text-[9px] text-red-500"
+                class="italic hidden text-[10px] md:text-[15px] text-red-500"
               ></span>
             </div>
             <div class="flex flex-col space-y-1">
               <label
                 id="textMonth"
-                class="font-semibold text-xs antialiased tracking-widest text-gray-500"
+                class="font-semibold text-md antialiased tracking-widest text-gray-500"
                 >MONTH</label
               >
               <input
                 id="inputMonth"
                 placeholder="09"
-                class="focus:border-purple caret-purple focus:outline-none p-2 border-2 rounded-md w-20 font-semibold antialiased"
+                class="focus:border-purple caret-purple focus:outline-none p-2 border-2 rounded-md w-[5.3rem] md:w-[9rem] h-14 font-semibold antialiased text-xl md:text-2xl"
               />
               <span
                 id="errorMonth"
-                class="italic hidden text-[8px] sm:text-[9px] text-red-500"
+                class="italic hidden text-[10px] md:text-[15px] text-red-500"
               ></span>
             </div>
             <div class="flex flex-col space-y-1">
               <label
                 id="textYear"
-                class="font-semibold text-xs antialiased tracking-widest text-gray-500"
+                class="font-semibold text-md antialiased tracking-widest text-gray-500"
                 >YEAR</label
               >
               <input
                 id="inputYear"
                 placeholder="1984"
-                class="focus:border-purple caret-purple focus:outline-none p-2 border-2 rounded-md w-20 font-semibold antialiased"
+                class="focus:border-purple caret-purple focus:outline-none p-2 border-2 rounded-md w-[5.3rem] md:w-[9rem] h-14 font-semibold antialiased text-xl md:text-2xl"
               />
               <span
                 id="errorYear"
-                class="italic hidden text-[8px] sm:text-[9px] text-red-500"
+                class="italic hidden text-[10px] md:text-[15px] text-red-500"
               ></span>
             </div>
           </div>
           <div class="mt-5 relative">
             <div
-              class="h-[0.09rem] sm:w-[24rem] w-full bg-gray-100 rounded-xs"
+              class="h-[0.20rem] md:w-[40rem] w-full bg-gray-100 rounded-xs"
             ></div>
-            <div class="absolute -top-5 right-[7rem] sm:right-0">
+            <div class="absolute -top-5 right-[8rem] md:right-0">
               <button
                 type="submit"
-                class="focus:bg-purple hover:bg-purple duration-300 bg-black rounded-full"
+                class="focus:bg-purple hover:bg-purple duration-300 bg-black rounded-full h-full"
               >
                 <svg
                   class="p-[11px]"
@@ -122,12 +124,12 @@
           <div class="flex space-x-1 items-center">
             <h3
               id="aYears"
-              class="font-bold text-5xl sm:text-6xl italic text-purple"
+              class="font-bold text-5xl md:text-7xl italic text-purple"
             >
               - -
             </h3>
             <h3
-              class="font-bold text-5xl sm:text-6xl italic text-black tracking-tight"
+              class="font-bold text-5xl md:text-7xl italic text-black tracking-tight"
             >
               years
             </h3>
@@ -135,12 +137,12 @@
           <div class="flex space-x-1 items-center">
             <h3
               id="aMonths"
-              class="font-bold text-5xl sm:text-6xl italic text-purple"
+              class="font-bold text-5xl md:text-7xl italic text-purple"
             >
               - -
             </h3>
             <h3
-              class="font-bold text-5xl sm:text-6xl italic text-black tracking-tight"
+              class="font-bold text-5xl md:text-7xl italic text-black tracking-tight"
             >
               months
             </h3>
@@ -148,12 +150,12 @@
           <div class="flex space-x-1 items-center">
             <h3
               id="aDays"
-              class="font-bold text-5xl sm:text-6xl italic text-purple"
+              class="font-bold text-5xl md:text-7xl italic text-purple"
             >
               - -
             </h3>
             <h3
-              class="font-bold text-5xl sm:text-6xl italic text-black tracking-tight"
+              class="font-bold text-5xl md:text-7xl italic text-black tracking-tight"
             >
               days
             </h3>
