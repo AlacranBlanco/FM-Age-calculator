@@ -83,6 +83,7 @@ inputDay.addEventListener("change", (e) => {
     textDay.classList.remove("text-red-500/80");
     errorDay.classList.add("hidden");
     errorDay.innerHTML = "";
+    isValid = true;
   } else {
     inputDay.classList.add("border-red-500");
     textDay.classList.add("text-red-500/80");
@@ -94,11 +95,12 @@ inputDay.addEventListener("change", (e) => {
 });
 
 inputMonth.addEventListener("change", (e) => {
-  if (e.target.value > 0 && e.target.value <= 31) {
+  if (e.target.value > 0 && e.target.value <= 12) {
     inputMonth.classList.remove("border-red-500");
     textMonth.classList.remove("text-red-500/80");
     errorMonth.classList.add("hidden");
     errorMonth.innerHTML = "";
+    isValid = true;
   } else {
     inputMonth.classList.add("border-red-500");
     textMonth.classList.add("text-red-500/80");
@@ -110,16 +112,21 @@ inputMonth.addEventListener("change", (e) => {
 });
 
 inputYear.addEventListener("change", (e) => {
-  if (e.target.value <= new Date().getFullYear()) {
+  if (e.target.value > 1900 && e.target.value <= new Date().getFullYear()) {
     inputYear.classList.remove("border-red-500");
     textYear.classList.remove("text-red-500/80");
     errorYear.classList.add("hidden");
     errorYear.innerHTML = "";
+    isValid = true;
   } else {
     inputYear.classList.add("border-red-500");
     textYear.classList.add("text-red-500/80");
     errorYear.classList.remove("hidden");
-    errorYear.innerHTML = "Must be in the past";
+    if (e.target.value < 1900) {
+      errorYear.innerHTML = "Must be greather than 1900";
+    } else {
+      errorYear.innerHTML = "Must be in the past";
+    }
     clearResult();
     isValid = false;
   }
